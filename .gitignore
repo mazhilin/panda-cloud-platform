@@ -21,3 +21,26 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.idea/
+
+### STS ###
+.settings/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+bin/
+
+### Gradle template
+.gradle
+/build/
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+
