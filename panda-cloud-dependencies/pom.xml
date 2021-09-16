@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.4</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.panda.cloud</groupId>
+    <artifactId>panda-cloud-dependencies</artifactId>
+    <version>${panda-cloud-snapshot.version}</version>
+    <name>panda-cloud-dependencies</name>
+    <packaging>pom</packaging>
+    <description>PandaCloud云平台统一依赖工程</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <servlet-api.version>4.0.1</servlet-api.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
+        <spring-boot.version>2.5.4</spring-boot.version>
+        <spring-cloud.version>2020.0.3</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <panda-cloud-properties.version>SNAPSHOT</panda-cloud-properties.version>
+        <panda-cloud-snapshot.version>0.0.1-SNAPSHOT</panda-cloud-snapshot.version>
+        <panda-cloud-release.version>0.0.1-RELEASE</panda-cloud-release.version>
+        <spring-cloud-eureka.version>3.0.3</spring-cloud-eureka.version>
+    </properties>
+
+
+    <dependencies>
+        <!--bootstrap 启动器-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
+        <!--监控-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--panda-cloud 公共版本定义-->
+            <!--            <dependency>
+                            <groupId>com.panda.cloud</groupId>
+                            <artifactId>panda-cloud-dependencies</artifactId>
+                            <version>${panda-cloud.version}</version>
+                            <type>pom</type>
+                            <scope>import</scope>
+                        </dependency>-->
+
+            <!--spring boot 公共版本定义-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--spring-cloud 公共版本定义-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--spring-cloud-alibaba 公共版本定义-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--web 模块-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <!--排除tomcat依赖-->
+                    <exclusion>
+                        <artifactId>spring-boot-starter-tomcat</artifactId>
+                        <groupId>org.springframework.boot</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-eureka-server</artifactId>
+                <version>${spring-cloud-eureka.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+                <version>${spring-cloud-eureka.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-register-eureka-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+
+
+            <!--panda-cloud-common project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-common-base</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-common-core</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-common project end -->
+
+            <!--panda-cloud-business project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-business-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-business-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-business-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-business-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-business project end -->
+
+            <!--panda-cloud-console project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-console-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-console-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-console-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-console-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-console project end -->
+
+            <!--panda-cloud-dashboard project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-dashboard-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-dashboard-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-dashboard-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-dashboard-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-dashboard project end -->
+
+            <!--panda-cloud-developer project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-developer-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-developer-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-developer-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-developer-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-developer project end -->
+
+            <!--panda-cloud-function project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-function-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-function-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-function-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-function-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-function project end -->
+
+            <!--panda-cloud-mobile project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-mobile-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-mobile-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-mobile-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-mobile-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-mobile project end -->
+
+            <!--panda-cloud-monitor project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-monitor-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-monitor-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-monitor-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-monitor-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-monitor project end -->
+
+            <!--panda-cloud-open project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-open-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-open-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-open-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-open-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-open project end -->
+
+            <!--panda-cloud-passport project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-passport-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-passport-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-passport-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-passport-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-passport project end -->
+
+            <!--panda-cloud-portal project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-portal-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-portal-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-portal-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-portal-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-portal project end -->
+
+            <!--panda-cloud-program project begin -->
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-program-api</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-program-client</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-program-common</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.panda.cloud</groupId>
+                <artifactId>panda-cloud-program-server</artifactId>
+                <version>${panda-cloud.version}</version>
+            </dependency>
+            <!--panda-cloud-program project end -->
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
