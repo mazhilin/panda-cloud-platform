@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.panda.cloud</groupId>
     <artifactId>panda-cloud-business-server</artifactId>
-    <version>${panda-cloud-snapshot.version}</version>
+    <version>${panda-cloud.version}</version>
     <name>panda-cloud-business-server</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -29,13 +29,5 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

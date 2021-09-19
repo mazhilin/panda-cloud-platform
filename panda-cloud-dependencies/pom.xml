@@ -10,8 +10,8 @@
     </parent>
     <groupId>com.panda.cloud</groupId>
     <artifactId>panda-cloud-dependencies</artifactId>
-    <version>${panda-cloud-snapshot.version}</version>
-    <name>panda-cloud-dependencies</name>
+    <version>${panda-cloud.version}</version>
+    <name>${project.artifactId}</name>
     <packaging>pom</packaging>
     <description>PandaCloud云平台统一依赖工程</description>
     <properties>
@@ -25,9 +25,7 @@
         <spring-boot.version>2.5.4</spring-boot.version>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
-        <panda-cloud-properties.version>SNAPSHOT</panda-cloud-properties.version>
-        <panda-cloud-snapshot.version>0.0.1-SNAPSHOT</panda-cloud-snapshot.version>
-        <panda-cloud-release.version>0.0.1-RELEASE</panda-cloud-release.version>
+        <panda-cloud.version>0.0.1-SNAPSHOT</panda-cloud.version>
         <spring-cloud-eureka.version>3.0.3</spring-cloud-eureka.version>
     </properties>
 

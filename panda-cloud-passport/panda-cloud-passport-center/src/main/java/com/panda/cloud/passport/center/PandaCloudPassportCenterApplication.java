@@ -1,12 +1,12 @@
-package com.panda.cloud.business.api;
+package com.panda.cloud.passport.center;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PandaCloudBusinessApiApplication {
+public class PandaCloudPassportCenterApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(PandaCloudBusinessApiApplication.class, args);
+    SpringApplication.run(PandaCloudPassportCenterApplication.class, args);
   }
 }

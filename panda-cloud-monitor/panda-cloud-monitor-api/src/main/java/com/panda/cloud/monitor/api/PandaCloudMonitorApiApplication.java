@@ -1,0 +1,12 @@
+package com.panda.cloud.monitor.api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PandaCloudMonitorApiApplication {
+
+  public static void main(String[] args) {
+    SpringApplication.run(PandaCloudMonitorApiApplication.class, args);
+  }
+}
