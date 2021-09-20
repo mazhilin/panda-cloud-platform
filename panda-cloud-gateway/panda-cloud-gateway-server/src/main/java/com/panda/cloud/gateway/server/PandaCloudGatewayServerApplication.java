@@ -1,0 +1,12 @@
+package com.panda.cloud.gateway.server;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PandaCloudGatewayServerApplication {
+
+  public static void main(String[] args) {
+    SpringApplication.run(PandaCloudGatewayServerApplication.class, args);
+  }
+}

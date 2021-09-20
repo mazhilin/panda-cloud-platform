@@ -64,4 +64,11 @@
         </plugins>
     </build>
 
+    <modules>
+        <module>panda-cloud-common-base</module>
+        <module>panda-cloud-common-core</module>
+        <module>panda-cloud-common-feign</module>
+        <module>panda-cloud-common-swagger</module>
+    </modules>
+
 </project>
