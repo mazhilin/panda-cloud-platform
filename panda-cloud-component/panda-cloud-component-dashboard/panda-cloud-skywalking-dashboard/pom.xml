@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.panda.cloud</groupId>
-    <artifactId>panda-cloud-component-dashboard</artifactId>
+    <artifactId>panda-cloud-skywalking-dashboard</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>panda-cloud-component-dashboard</name>
+    <name>panda-cloud-skywalking-dashboard</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
@@ -37,12 +37,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <modules>
-        <module>panda-cloud-springboot-dashboard</module>
-        <module>panda-cloud-bootstrap-dashboard</module>
-        <module>panda-cloud-application-dashboard</module>
-        <module>panda-cloud-skywalking-dashboard</module>
-    </modules>
 
 </project>
