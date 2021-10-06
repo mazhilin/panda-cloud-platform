@@ -41,7 +41,7 @@
     <modules>
         <module>panda-cloud-portal-api</module>
         <module>panda-cloud-portal-center</module>
-        <module>panda-cloud-portal-common</module>
+        <module>panda-cloud-portal-core</module>
         <module>panda-cloud-portal-client</module>
         <module>panda-cloud-portal-server</module>
     </modules>

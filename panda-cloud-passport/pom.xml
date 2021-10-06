@@ -42,7 +42,7 @@
         <module>panda-cloud-passport-api</module>
         <module>panda-cloud-passport-center</module>
         <module>panda-cloud-passport-server</module>
-        <module>panda-cloud-passport-common</module>
+        <module>panda-cloud-passport-core</module>
         <module>panda-cloud-passport-client</module>
     </modules>
 </project>

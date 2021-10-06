@@ -42,7 +42,7 @@
         <module>panda-cloud-schedule-api</module>
         <module>panda-cloud-schedule-client</module>
         <module>panda-cloud-schedule-server</module>
-        <module>panda-cloud-schedule-common</module>
+        <module>panda-cloud-schedule-core</module>
         <module>panda-cloud-schedule-center</module>
     </modules>
 

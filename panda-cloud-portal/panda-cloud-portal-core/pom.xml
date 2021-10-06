@@ -3,15 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.panda.cloud</groupId>
-        <artifactId>panda-cloud-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.panda.cloud</groupId>
-    <artifactId>panda-cloud-program</artifactId>
+    <artifactId>panda-cloud-portal-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>${project.artifactId}</name>
-    <packaging>pom</packaging>
+    <name>panda-cloud-portal-core</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
@@ -38,11 +38,4 @@
         </plugins>
     </build>
 
-    <modules>
-        <module>panda-cloud-program-api</module>
-        <module>panda-cloud-program-server</module>
-        <module>panda-cloud-program-core</module>
-        <module>panda-cloud-program-client</module>
-        <module>panda-cloud-program-center</module>
-    </modules>
 </project>

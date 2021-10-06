@@ -4,14 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.panda.cloud</groupId>
-        <artifactId>panda-cloud-parent</artifactId>
+        <artifactId>panda-cloud-passport</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.panda.cloud</groupId>
-    <artifactId>panda-cloud-program</artifactId>
+    <artifactId>panda-cloud-passport-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>${project.artifactId}</name>
-    <packaging>pom</packaging>
+    <name>panda-cloud-passport-core</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
@@ -38,11 +37,4 @@
         </plugins>
     </build>
 
-    <modules>
-        <module>panda-cloud-program-api</module>
-        <module>panda-cloud-program-server</module>
-        <module>panda-cloud-program-core</module>
-        <module>panda-cloud-program-client</module>
-        <module>panda-cloud-program-center</module>
-    </modules>
 </project>
