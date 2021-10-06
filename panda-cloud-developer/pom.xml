@@ -44,7 +44,7 @@
     <modules>
         <module>panda-cloud-developer-api</module>
         <module>panda-cloud-developer-center</module>
-        <module>panda-cloud-developer-common</module>
+        <module>panda-cloud-developer-core</module>
         <module>panda-cloud-developer-client</module>
         <module>panda-cloud-developer-server</module>
     </modules>

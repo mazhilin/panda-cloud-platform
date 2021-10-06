@@ -65,7 +65,7 @@
     <modules>
         <module>panda-cloud-base-api</module>
         <module>panda-cloud-base-center</module>
-        <module>panda-cloud-base-common</module>
+        <module>panda-cloud-base-core</module>
         <module>panda-cloud-base-client</module>
         <module>panda-cloud-base-server</module>
     </modules>

@@ -40,7 +40,8 @@
 
     <modules>
         <module>panda-cloud-gateway-api</module>
-        <module>panda-cloud-gateway-common</module>
+        <module>panda-cloud-gateway-center</module>
+        <module>panda-cloud-gateway-core</module>
         <module>panda-cloud-gateway-client</module>
         <module>panda-cloud-gateway-server</module>
     </modules>

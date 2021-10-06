@@ -42,7 +42,7 @@
 		<module>panda-cloud-dispatch-api</module>
 		<module>panda-cloud-dispatch-center</module>
 		<module>panda-cloud-dispatch-client</module>
-		<module>panda-cloud-dispatch-common</module>
+		<module>panda-cloud-dispatch-core</module>
 		<module>panda-cloud-dispatch-server</module>
 	</modules>
 

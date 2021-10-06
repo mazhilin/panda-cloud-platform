@@ -45,7 +45,7 @@
         <module>panda-cloud-creative-api</module>
         <module>panda-cloud-creative-center</module>
         <module>panda-cloud-creative-client</module>
-        <module>panda-cloud-creative-common</module>
+        <module>panda-cloud-creative-core</module>
         <module>panda-cloud-creative-server</module>
     </modules>
 

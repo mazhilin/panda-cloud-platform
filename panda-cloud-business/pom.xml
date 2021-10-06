@@ -68,7 +68,7 @@
         <!--业务Client-->
         <module>panda-cloud-business-client</module>
         <!--业务Common-->
-        <module>panda-cloud-business-common</module>
+        <module>panda-cloud-business-core</module>
         <!--业务Center-->
         <module>panda-cloud-business-center</module>
     </modules>
